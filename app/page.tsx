@@ -19,6 +19,7 @@ export default function Home() {
       try {
         setLoading(true)
         const companyName = getCompanyNameFromUrl()
+        console.log("🚀 ~ fetchCompanyData ~ companyName:", companyName)
 
         if (!companyName) {
           setLoading(false)
@@ -55,10 +56,16 @@ export default function Home() {
         const urlParams = new URLSearchParams(window.location.search)
         return urlParams.get("company")
       } else {
-        const parts = hostname.split(".")
-        if (parts.length >= 3) {
-          return parts[0]
-        }
+
+        // this implementation is for localhost only
+        const urlParams = new URLSearchParams(window.location.search)
+        return urlParams.get("company")
+
+        // in a website on which the subdomain is defined
+        // const parts = hostname.split(".")
+        // if (parts.length >= 3) {
+        //   return parts[0]
+        // }
       }
     }
     return null
