@@ -91,7 +91,7 @@ export default function Home() {
             </div>
             <div className="mt-4 md:mt-0">
               <button
-                onClick={() => router.push("/")}
+                onClick={() => handleSelectCompany("foodpanda")}
                 className="px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors"
               >
                 Change Company
