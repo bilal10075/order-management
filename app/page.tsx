@@ -65,7 +65,8 @@ export default function Home() {
   }
 
   const handleSelectCompany = (companyName: string) => {
-    router.push(`/?company=${companyName}`)
+    window.location.href=(`/?company=${companyName}`)
+    // router.refresh()
   }
 
   if (loading) {
@@ -89,14 +90,7 @@ export default function Home() {
               <CompanyLogo logoUrl={companyData.logoUrl} companyName={companyData.name} />
               <h1 className="text-3xl font-bold text-gray-800 mt-4 md:mt-0 md:ml-6 capitalize">{companyData.name}</h1>
             </div>
-            <div className="mt-4 md:mt-0">
-              <button
-                onClick={() => handleSelectCompany("foodpanda")}
-                className="px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors"
-              >
-                Change Company
-              </button>
-            </div>
+            
           </div>
         </div>
 

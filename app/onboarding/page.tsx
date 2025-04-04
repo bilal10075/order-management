@@ -111,13 +111,7 @@ export default function OnboardingPage() {
               </div>
             </form>
 
-            <div className="mt-8 border-t pt-6">
-              <h2 className="text-md font-medium text-gray-900">How to access the company dashboard</h2>
-              <p className="mt-2 text-sm text-gray-500">After adding a company, it can be accessed at:</p>
-              <code className="mt-1 block text-sm bg-gray-100 p-2 rounded">[company-name].ordermade.com</code>
-              <p className="mt-2 text-sm text-gray-500">For local development, use:</p>
-              <code className="mt-1 block text-sm bg-gray-100 p-2 rounded">localhost:3000?company=[company-name]</code>
-            </div>
+           
           </div>
         </div>
       </div>
